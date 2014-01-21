@@ -1,0 +1,34 @@
+{
+	"name": "rusporting/yii2-elfinder",
+	"description": "Yii2 elfinder Widgets",
+	"keywords": ["yii", "framework","yii2 elfinder filemanager"],
+	"homepage": "http://www.frenzel.net/",
+	"type": "yii2-extension",
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Bodgan Savluk",
+			"role": "Created Version Yii"
+		},
+		{
+			"name": "Philipp Frenzel",
+			"email": "philipp@frenzel.net",
+			"homepage": "http://www.frenzel.net/",
+			"role": "Author Version Yii2"
+		},
+		{
+			"name": "Vitaliy Syrchikov",
+			"email": "maddoger@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"rusporting\\elfinder\\": ""
+		}
+	},
+	"minimum-stability": "dev",
+	"require": {
+		"yiisoft/yii2": "*",
+		"yiisoft/yii2-jui": "*"
+	}
+}
