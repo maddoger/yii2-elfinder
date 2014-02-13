@@ -11,7 +11,7 @@
  * @author z_bodya
  */
 
-namespace rusporting\elfinder;
+namespace maddoger\elfinder;
 
 use Yii;
 use yii\base\Model;
@@ -90,7 +90,7 @@ class Widget extends elWidget
         $view = $this->getView();
 
         /** @var \yii\web\AssetBundle $assetClass */
-        $assetClass = 'rusporting\\elfinder\\CoreAsset';
+        $assetClass = 'maddoger\\elfinder\\CoreAsset';
         $assetClass::register($view);
 
         $js = array();

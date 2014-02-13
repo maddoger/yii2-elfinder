@@ -1,5 +1,5 @@
 {
-	"name": "rusporting/yii2-elfinder",
+	"name": "maddoger/yii2-elfinder",
 	"description": "Yii2 elfinder Widgets",
 	"keywords": ["yii", "framework","yii2 elfinder filemanager"],
 	"homepage": "http://www.frenzel.net/",
@@ -23,7 +23,7 @@
 	],
 	"autoload": {
 		"psr-4": {
-			"rusporting\\elfinder\\": ""
+			"maddoger\\elfinder\\": ""
 		}
 	},
 	"minimum-stability": "dev",

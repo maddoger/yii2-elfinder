@@ -1,6 +1,6 @@
 <?php
 
-namespace rusporting\elfinder;
+namespace maddoger\elfinder;
 
 use yii\web\AssetBundle;
 
@@ -11,7 +11,7 @@ use yii\web\AssetBundle;
 
 class CoreAsset extends AssetBundle
 {
-    public $sourcePath = '@rusporting/elfinder/assets';
+    public $sourcePath = '@maddoger/elfinder/assets';
     public $css = array(
         'css/elfinder.full.css',
         'css/theme.css',

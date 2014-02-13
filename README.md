@@ -1,4 +1,4 @@
-rusporting\elfinder
+maddoger\elfinder
 ============
 
 Thanks to:
@@ -20,7 +20,7 @@ How to install:
 Add this to your composer.json require section
 
 ```json
-  "philippfrenzel/rusporting\elfinder": "dev-master",
+  "philippfrenzel/maddoger\elfinder": "dev-master",
 ```
 
 After that add into your controller the following function
@@ -30,7 +30,7 @@ public function actions()
   {
     return array(
       'connector' => array(
-        'class' => 'rusporting\elfinder\ConnectorAction',
+        'class' => 'maddoger\elfinder\ConnectorAction',
         'clientOptions'=>array(
           'locale' => '',
           'debug'  => false,
@@ -52,7 +52,7 @@ And finaly the view should look like this:
 ```php
 
 use yii\helpers\Html;
-use rusporting\elfinder\yii2elfinder;
+use maddoger\elfinder\yii2elfinder;
 
 /**
  * @var yii\base\View $this
