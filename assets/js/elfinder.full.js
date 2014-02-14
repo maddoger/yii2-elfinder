@@ -2237,7 +2237,7 @@ elFinder.prototype = {
 			
 			// Rails csrf meta tag (for XSS protection), see #256
       var rails_csrf_token = $('meta[name=csrf-token]').attr('content');
-      var rails_csrf_param = $('meta[name=csrf-var]').attr('content');
+      var rails_csrf_param = $('meta[name=csrf-param]').attr('content');
 
 			form.append('<input type="hidden" name="'+(self.newAPI ? 'target' : 'current')+'" value="'+self.cwd().hash+'"/>')
 				.append('<input type="hidden" name="html" value="1"/>')
@@ -2410,7 +2410,7 @@ elFinder.prototype = {
 
 				// Rails csrf meta tag (for XSS protection), see #256
 	      var rails_csrf_token = $('meta[name=csrf-token]').attr('content');
-	      var rails_csrf_param = $('meta[name=csrf-var]').attr('content');
+	      var rails_csrf_param = $('meta[name=csrf-param]').attr('content');
 				
 				xhr.open('POST', self.uploadURL, true);
 				formData.append('cmd', 'upload');
