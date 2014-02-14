@@ -12,7 +12,7 @@
  * @author z_bodya
  */
 
-namespace rusporting\elfinder;
+namespace maddoger\elfinder;
 
 // error_reporting(0);
 ini_set('max_file_uploads', 50); // allow uploading up to 50 files at once
