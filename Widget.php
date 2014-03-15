@@ -15,6 +15,7 @@ namespace maddoger\elfinder;
 
 use Yii;
 use yii\base\Model;
+use yii\helpers\Url;
 use yii\web\View;
 use yii\helpers\Html;
 use yii\helpers\Json;
@@ -62,7 +63,7 @@ class Widget extends elWidget
            echo "connectorRoute must be set!";
            exit;
         }
-        $this->clientOptions['url'] = Html::url(array($this->connectorRoute));
+        $this->clientOptions['url'] = Url::to(array($this->connectorRoute));
         
         //fetch language from app
         $this->clientOptions['lang'] = substr(Yii::$app->language,0,2);        
