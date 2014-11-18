@@ -140,6 +140,7 @@ class Module extends BackendModule
                 'icon' => 'fa fa-files-o',
                 'url' => ['/' . $this->id . '/files/index'],
                 'activeUrl' => '/' . $this->id . '/files/*',
+                'roles' => ['elfinder.access'],
             ]
         ];
     }
