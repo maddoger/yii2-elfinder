@@ -16,16 +16,12 @@ namespace maddoger\elfinder;
 
 // error_reporting(0);
 ini_set('max_file_uploads', 50); // allow uploading up to 50 files at once
-ini_set('upload_max_filesize','100MB');
-ini_set('post_max_size','100MB');
+ini_set('upload_max_filesize','2000MB');
+ini_set('post_max_size','2000MB');
 
 // needed for case insensitive search to work, due to broken UTF-8 support in PHP
 ini_set('mbstring.internal_encoding', 'UTF-8');
 ini_set('mbstring.func_overload', 2);
-
-if (function_exists('date_default_timezone_set')) {
-	date_default_timezone_set('Europe/Berlin');
-}
 
 require_once(__DIR__ . '/php/elFinderConnector.class.php');
 require_once(__DIR__ . '/php/elFinder.class.php');
