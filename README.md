@@ -1,5 +1,5 @@
-maddoger\elfinder
-============
+maddoger/elfinder
+=================
 
 Thanks to:
 https://github.com/Studio-42/elFinder
@@ -20,7 +20,7 @@ How to install:
 Add this to your composer.json require section
 
 ```json
-  "philippfrenzel/maddoger\elfinder": "dev-master",
+  "maddoger/elfinder": "dev-master",
 ```
 
 After that add into your controller the following function
