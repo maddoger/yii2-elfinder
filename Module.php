@@ -23,7 +23,7 @@ class Module extends BackendModule
      * @var array elfinder roots
      * Defaults to @static
      */
-    public $roots;
+    public $roots = [];
 
     /**
      * @var array file attributes
@@ -43,7 +43,6 @@ class Module extends BackendModule
         parent::init();
 
         if (!isset(Yii::$app->i18n->translations['maddoger/elfinder'])) {
-
             Yii::$app->i18n->translations['maddoger/elfinder'] = [
                 'class' => 'yii\i18n\PhpMessageSource',
                 'basePath' => '@maddoger/elfinder/messages',
@@ -78,17 +77,27 @@ class Module extends BackendModule
             ];
         }
 
+
         if (!$this->roots) {
             $this->roots = [
                 [
                     'driver' => 'LocalFileSystem',
                     'path' => Yii::getAlias('@static'),
                     'URL' => Yii::getAlias('@staticUrl'),
-                    'attributes' => $this->attributes,
-                    'accessControl' => [$this, 'accessControl'],
-                    'accessControlData' => ['read' => ['elfinder.access'], 'write' => ['elfinder.upload']],
                 ]
             ];
+        }
+
+        foreach ($this->roots as $key=>$root) {
+            if (!isset($root['accessControl'])) {
+                $this->roots[$key]['accessControl'] = [$this, 'accessControl'];
+            }
+            if (!isset($root['accessControlData'])) {
+                $this->roots[$key]['accessControl'] = ['read' => ['elfinder.access'], 'write' => ['elfinder.upload']];
+            }
+            if (!isset($root['attributes'])) {
+                $this->roots[$key]['attributes'] = $this->attributes;
+            }
         }
         $this->clientOptions['roots'] = $this->roots;
     }
